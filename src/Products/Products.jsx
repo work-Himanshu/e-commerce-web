@@ -31,7 +31,7 @@ function Products() {
       console.log(query);
 
       const response = await axios.get('https://api.pexels.com/v1/search', {
-        params: { query: query, per_page: 10 },
+        params: { query: query, per_page: 20 },
         headers: {
           Authorization:
             'zEg8HUKQJWRvqWFCZP4RRT8tL5iSrWpR4pzDi3DlIneQ0Z2BRXdKAh6l',
