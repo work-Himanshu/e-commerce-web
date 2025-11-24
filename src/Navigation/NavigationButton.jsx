@@ -16,6 +16,7 @@ export default function NavigationButton() {
         width: '100%',
         bgcolor: 'background.paper',
         backgroundColor: 'lightBG.main',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
       }}
     >
       <Tabs

@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import Elements from './Elements';
 import axios from 'axios';
 import NavigationButton from '../Navigation/NavigationButton';
+import HeroElement from './HeroElement';
+import Categories from './Categories';
 function Products() {
   const { section } = useParams();
   useEffect(() => {
@@ -47,8 +49,14 @@ function Products() {
       <div className="fixed mt-14 md:mt-16 w-full bg-white z-10">
         <NavigationButton />
       </div>
-      <div className="md:px-50 ">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 pt-30">
+      <div className="md:px-50 pt-30">
+        <div>
+          <HeroElement />
+        </div>
+        <div>
+          <Categories />
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 ">
           {data.map((photoData) => {
             return (
               <Elements
@@ -56,6 +64,7 @@ function Products() {
                 url={photoData.src.medium}
                 alt={photoData.photographer}
                 description={photoData.alt}
+                price={photoData.width}
               />
             );
           })}

@@ -9,6 +9,9 @@ import Drawer from '@mui/material/Drawer';
 import NavigationButtons from './NavigationButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router-dom';
+import { Paper } from '@mui/material';
+import Menu from './Menu';
+import SearchIcon from '@mui/icons-material/Search';
 
 function Navigation() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -17,7 +20,7 @@ function Navigation() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed">
+        <AppBar position="fixed" sx={{ boxShadow: 'none' }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -32,13 +35,15 @@ function Navigation() {
               variant="h6"
               component="div"
               sx={{ flexGrow: 1 }}
-              className="flex justify-center hover:scale-95 transform "
+              className="flex justify-center hover:scale-95 transform cursor-pointer"
+              onClick={() => navigate('/products/men')}
             >
-              The Souled Store
+              The ROY Store
             </Typography>
             <Box color="inherit">
+              <SearchIcon className='mr-4'/>
               <ShoppingCartIcon
-                onClick={()=>navigate('/cart')}
+                onClick={() => navigate('/cart')}
                 className="hover:scale-90"
               />
             </Box>
@@ -51,7 +56,8 @@ function Navigation() {
         onClose={() => setDrawerOpen(false)}
       >
         <Box>
-          <Typography
+          <Paper
+            elevation={10}
             variant="h6"
             sx={{
               my: 2,
@@ -60,9 +66,10 @@ function Navigation() {
               fontWeight: 'bold',
             }}
           >
-            The Souled Store
-          </Typography>
+            The ROY Store
+          </Paper>
           <NavigationButtons />
+          <Menu />
         </Box>
       </Drawer>
     </>

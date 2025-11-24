@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-export default function Elements({ url, alt , description}) {
+export default function Elements({ url, alt, description, price }) {
   return (
     <Card className="max-w-md hover:scale-103 transform transition-all duration-300">
       <CardMedia
@@ -16,17 +16,23 @@ export default function Elements({ url, alt , description}) {
         title={alt || 'product image'}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {alt || 'Person'}
-        </Typography>
+        <div className="flex justify-between mb-2">
+          <Typography gutterBottom variant="h7" className="w-3" component="div">
+            {alt || 'Person'}
+          </Typography>
+          <Button variant="secondary" className="p-2" size="small">
+            ₹ {price} /-
+          </Button>
+        </div>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {description || 'Product description goes here.'}
         </Typography>
+        <div className="mt-2 justify-self-end mt-4">
+          <Button variant="contained" size="small">
+            Share
+          </Button>
+        </div>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
