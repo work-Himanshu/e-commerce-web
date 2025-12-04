@@ -108,11 +108,9 @@ export default productSlice.reducer;
 
 These are a few Images of the App
 
-```
-[Home Page](public/image.png)
-![Category Page](assets/screenshots/category.png)
-![Product Details](assets/screenshots/details.png)
-```
+
+[Home Page](Home.png)
+
 
 ---
 
