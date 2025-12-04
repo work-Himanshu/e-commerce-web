@@ -110,6 +110,11 @@ These are a few Images of the App
 
 
 [Home Page](Home.png)
+[SideBar](SideBar.png)
+[Cart](Cart.png)
+[Catalog](Catalog.png)
+[Product Detail](ProductDetail.png)
+[Search](Search.png)
 
 
 ---
