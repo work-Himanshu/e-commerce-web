@@ -109,7 +109,7 @@ export default productSlice.reducer;
 Replace with your own images:
 
 ```
-![Home Page](assets/screenshots/home.png)
+![Home Page](public/image.png)
 ![Category Page](assets/screenshots/category.png)
 ![Product Details](assets/screenshots/details.png)
 ```
